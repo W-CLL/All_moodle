@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLDB PATH="blocks/data_screen/db" VERSION="20180810" COMMENT="XMLDB file for Moodle blocks/data_screen"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+    <TABLES>
+        <TABLE NAME="block_data_screen_platform" COMMENT="Platform statistics">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="effective_num" TYPE="int" NOTNULL="true" SEQUENCE="false" LENGTH="10" COMMENT="Number of effective courses"/>
+                <FIELD NAME="course_num" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Number of courses"/>
+                <FIELD NAME="teacher_num" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Number of teachers"/>
+                <FIELD NAME="student_num" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Number of students"/>
+                <FIELD NAME="percourse_num" TYPE="char" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Number of courses per student"/>
+                <FIELD NAME="updated_time" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+        <TABLE NAME="block_data_screen_college" COMMENT="College or teacher statistics">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="id"/>
+                <FIELD NAME="college_id" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="College ID"/>
+                <FIELD NAME="idnumber" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Id number"/>
+                <FIELD NAME="path" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="College path"/>
+                <FIELD NAME="teacher_id" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="Teacher ID(be allowded null)"/>
+                <FIELD NAME="name" TYPE="char" LENGTH="128" NOTNULL="true" SEQUENCE="false" COMMENT="College name or teacher name"/>
+                <FIELD NAME="dept" TYPE="char" LENGTH="128" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="url" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="course_num" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Effective number"/>
+                <FIELD NAME="student_num" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Student number"/>
+                <FIELD NAME="teacher_num" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="Teacher number"/>
+                <FIELD NAME="resource_num" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Resource number"/>
+                <FIELD NAME="activity_num" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Activity number"/>
+                <FIELD NAME="type" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Type：1=>college 0=>teacher"/>
+                <FIELD NAME="updated_time" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+                <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+            <INDEXES>
+                <INDEX NAME="data_screen_college_id" UNIQUE="false" FIELDS="college_id"/>
+                <INDEX NAME="data_screen_teacher_id" UNIQUE="false" FIELDS="teacher_id"/>
+            </INDEXES>
+        </TABLE>
+        <TABLE NAME="block_data_screen_access_top" COMMENT="Top view">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="type" TYPE="char" LENGTH="10"  NOTNULL="true" SEQUENCE="false"/>
+                <FIELD NAME="counts" TYPE="int" LENGTH="10"  NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+                <FIELD NAME="date" TYPE="int" LENGTH="10"  NOTNULL="true" SEQUENCE="false"/>
+                <FIELD NAME="updated_time" TYPE="int" LENGTH="10"  NOTNULL="true" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+        <TABLE NAME="block_data_screen_access" COMMENT="Statistic access">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="pv" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="uv" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="ip" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="access_num" TYPE="int" LENGTH="10" DEFAULT="0"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="date" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="updated_time" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+            <INDEXES>
+                <INDEX NAME="data_screen_access_date" UNIQUE="false" FIELDS="date"/>
+            </INDEXES>
+        </TABLE>
+        <TABLE NAME="block_data_screen_forum" COMMENT="forum visit">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="forum" TYPE="int" LENGTH="10" DEFAULT="0" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="course" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="section" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="teacher_posts" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="reply_teacher" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="student_posts" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="reply_student" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="updated_time" TYPE="int" LENGTH="10" DEFAULT="0"  NOTNULL="false" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+        <TABLE NAME="block_data_screen_semester" COMMENT="Semester">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="semester" TYPE="int" LENGTH="1" DEFAULT="0" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="year" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="start_time" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="end_time" TYPE="int" LENGTH="10" DEFAULT="0"  NOTNULL="false" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+        <TABLE NAME="block_data_screen_quiz" COMMENT="Assign and quiz">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="course" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+                <FIELD NAME="activity_id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+                <FIELD NAME="post_counts" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="grade_avg" TYPE="number" LENGTH="10" NOTNULL="false" DECIMALS="5" SEQUENCE="false"/>
+                <FIELD NAME="type" TYPE="int" LENGTH="1" DEFAULT="0"  NOTNULL="false" SEQUENCE="false" COMMENT="0:assgin,1:quiz"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+            <INDEXES>
+                <INDEX NAME="data_screen_activity_id" UNIQUE="false" FIELDS="activity_id"/>
+            </INDEXES>
+        </TABLE>
+        <TABLE NAME="block_data_screen_stats_log" COMMENT="Statistics log">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="method" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false"/>
+                <FIELD NAME="status" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+                <FIELD NAME="start_time" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="end_time" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+        <TABLE NAME="block_data_screen_course" COMMENT="Course statistics">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="id"/>
+                <FIELD NAME="course_id" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="path" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false"/>
+                <FIELD NAME="full_name" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="short_name" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="start_time" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="end_time" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="summary" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="time_created" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="img" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="category_id" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="category" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="teachers" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="tags" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="students" TYPE="int" LENGTH="10"  NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+                <FIELD NAME="teacher_counts" TYPE="int" LENGTH="10"  NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+                <FIELD NAME="resource_num" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="activity_num" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="forums" TYPE="char" LENGTH="255"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="assigns" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="quiz" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="open_times" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+            <INDEXES>
+                <INDEX NAME="data_screen_category_id" UNIQUE="false" FIELDS="category_id"/>
+                <INDEX NAME="data_screen_course_id" UNIQUE="false" FIELDS="course_id"/>
+            </INDEXES>
+        </TABLE>
+        <TABLE NAME="block_data_screen_visit" COMMENT="Count the number of course or mod visits">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="user_id" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="type" SEQUENCE="false" TYPE="int" LENGTH="10" DEFAULT="0" NOTNULL="true" />
+                <FIELD NAME="instance_id" SEQUENCE="false" TYPE="int" LENGTH="10" DEFAULT="0" NOTNULL="false"/>
+                <FIELD NAME="course_id" SEQUENCE="false" TYPE="int" LENGTH="10" DEFAULT="0" NOTNULL="true"/>
+                <FIELD NAME="role" SEQUENCE="false" TYPE="char" LENGTH="255" DEFAULT="0" NOTNULL="false"/>
+                <FIELD NAME="access_num" TYPE="int" LENGTH="10" DEFAULT="0"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="download" TYPE="int" LENGTH="10" DEFAULT="0"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="spend_time" SEQUENCE="false" TYPE="int" LENGTH="10" DEFAULT="0" NOTNULL="false" />
+                <FIELD NAME="grademax" SEQUENCE="false" TYPE="int" LENGTH="10" DEFAULT="0" NOTNULL="false" />
+                <FIELD NAME="finalgrade" SEQUENCE="false" TYPE="int" LENGTH="10" DEFAULT="0" NOTNULL="false" />
+                <FIELD NAME="create_num" SEQUENCE="false" TYPE="int" LENGTH="10" DEFAULT="0" NOTNULL="false" />
+                <FIELD NAME="section" SEQUENCE="false" TYPE="int" LENGTH="10" NOTNULL="false" />
+                <FIELD NAME="mod_name" TYPE="char" LENGTH="255"  NOTNULL="false" DEFAULT="" SEQUENCE="false"/>
+                <FIELD NAME="instance_name" TYPE="char" LENGTH="255"  NOTNULL="false" DEFAULT="" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+            <INDEXES>
+                <INDEX NAME="user_id" UNIQUE="false" FIELDS="user_id"/>
+                <INDEX NAME="instance_id" UNIQUE="false" FIELDS="instance_id"/>
+                <INDEX NAME="course_id" UNIQUE="false" FIELDS="course_id"/>
+                <INDEX NAME="type" UNIQUE="false" FIELDS="type"/>
+            </INDEXES>
+        </TABLE>
+        <TABLE NAME="block_data_screen_user" COMMENT="Statistics user data">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="user_id" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="login" SEQUENCE="false" TYPE="int" LENGTH="10" DEFAULT="0" NOTNULL="true" />
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+        <TABLE NAME="block_data_screen_active" COMMENT="Statistic access">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="courses" TYPE="int" LENGTH="10"  NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+                <FIELD NAME="students" TYPE="int" LENGTH="10"  NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+                <FIELD NAME="date" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="updated_time" TYPE="int" LENGTH="10"  NOTNULL="false" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+            <INDEXES>
+                <INDEX NAME="data_screen_access_date" UNIQUE="false" FIELDS="date"/>
+            </INDEXES>
+        </TABLE>
+    </TABLES>
+</XMLDB>

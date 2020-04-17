@@ -1,0 +1,51 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template block_data_screen/semester
+
+    This template renders the main content area for the block_data_screen block.
+
+    Example context (json):
+    {}
+}}
+<table class="generaltable">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>{{#str}}year, block_data_screen{{/str}}</th>
+			<th>{{#str}}semester, block_data_screen{{/str}}</th>
+			<th>{{#str}}operation, block_data_screen{{/str}}</th>
+		</tr>
+	</thead>
+	<tbody>
+	{{#semester_list}}
+		<tr>
+			<td style="word-wrap:break-word;word-break:break-all;" width="20%";>{{id}}</td>
+			<td style="word-wrap:break-word;word-break:break-all;" width="20%";>{{year}}</td>
+			<td style="word-wrap:break-word;word-break:break-all;" width="20%";>{{semester}}</td>
+            <td style="word-wrap:break-word;word-break:break-all;" width="40%";>
+                <a href="{{{edit}}}">{{#str}}edit, block_data_screen{{/str}}</a>
+                <a href="{{{delete}}}">{{#str}}delete, block_data_screen{{/str}}</a>
+			</td>
+		</tr>
+	{{/semester_list}}
+	</tbody>
+</table>
+<div id="page">{{{page}}}</div>
+<div class="text-center">
+<a href="{{{add}}}" class="btn btn-default">{{#str}}add, block_data_screen{{/str}}</a>
+</div>

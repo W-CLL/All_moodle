@@ -1,0 +1,150 @@
+body{font-family: Microsoft YaHei!important;}
+.allCourse span{color: #333333;font-size:16px;line-height:21px;margin-right: 5px;font-weight: bold}
+.allCourse small{font-size:12px!important;color:#678098!important;line-height:16px!important;font-weight: normal!important}
+.allCourseDiv{padding-bottom:10px;border-bottom: 2px solid rgba(103,128,152,0.2);}
+.download{width: 62px; border-color: #F36B5B;background-image:url(../img/download_icon@2x.png);background-repeat: no-repeat;background-position: 7px 9px;background-size: 16px 16px;color: #F36B5B;padding-left: 26px;margin-top: -7px;}
+.mt-0{margin-top: 0px!important;}
+.schDownload{width: 62px; border-color: #F36B5B;background-image:url(../img/download_icon@2x.png);background-repeat: no-repeat;background-position: 7px 9px;background-size: 16px 16px;color: #F36B5B;padding-left: 26px;}
+.m-tb-15{margin:20px 0 20px;}
+
+.items{float: left;padding-right: 15px;}
+.items_one{width: 16%;}
+.items_two{width:23%;}
+.labels{float: left;margin-top: 5px;}
+.labels_one{width: 70px;}
+.labels_two{width: 98px;}
+.input_one{width:calc(100% - 70px);}
+.input_two{width:calc(100% - 98px);}
+.inputs{float: left;border-radius: 4px!important;}
+.search{float: left;width:5.5%;padding-right: 0!important;}
+.searchInput{background-image: url(../img/search_icon_light.png);background-repeat: no-repeat;background-position: 7px 9px;background-size: 16px 16px;padding-left: 26px}
+@media (max-width:768px){
+  .attrTable tr td:nth-child(1),.attrTable tr td:nth-child(2),.attrTable tr td:nth-child(4),.attrTable tr td:nth-child(5){display: none!important;}
+  .helplessTable tr td:nth-child(1),.helplessTable tr td:nth-child(3),.helplessTable tr td:nth-child(5),.helplessTable tr td:nth-child(6){display: none;}
+  .schDownload{margin-top:9px;}
+  .search_scl{margin-right:15px!important;}
+  /* .search,.download{float:right;} */
+}
+@media (max-width:991px){
+  .items{margin:8px 0;padding:0;}
+  .items_one{width: 100%;}
+  .items_two{width:100%;}
+  .items_third{width: 40%}
+  .search{width: 70px;}
+  .schDownload{margin-top:8px;}
+  .search_scl{margin-right:15px!important;}
+}
+@media (min-width:991px) and (max-width:1200px){
+  .items{margin:8px 0;padding: 0;}
+  .items_one{width: 50%;}
+  .items_two{width:50%;}
+  .items_third{width: 40%;}
+  .search{width: 70px;}
+  .search_scl{margin-right:15px!important;}
+  .courseProject,.courseClasses,.startTime,.numStart{padding-right: 15px!important;}
+  .schDownload{margin-top:8px;}
+  .schoolName{padding-right:15px;}
+}
+.attrTable tr th,.helplessTable tr th{height: 36px;text-align: center;}
+
+/* accessAnalysis.html */
+.dateTime{margin-bottom:10px;}
+.items_third{width: 15%;}
+.accessAnalyChart{width: 100%;height: 400px;margin-top: 40px;}
+.bgTr{background-color: #F5F8FB}
+.anaysisTable tbody tr td{text-align: center;}
+tr.bgTr td{width: 20%;}
+.time{margin-right: 25px!important;}
+
+
+
+
+/* teahProfile_one.html */
+.content{width: 100%;height: 260px;background-color: #fff;padding-top: 10px;margin-bottom: 15px;cursor:pointer;}
+.headImg{width: 90px;height: 90px;margin:10px auto;}
+.teacherhead_icon{width: 100%;height: 100%; border-radius: 60px!important;}
+.teacherName{font-size:20px;color:rgba(90,155,210,1);margin:10px auto;}
+.collegeName{font-size:14px;color:rgba(102,102,102,1);margin:10px auto 17px auto;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 15px;height: 20px;}
+
+.bottom{width: 100%;height: 45px;text-align: center}
+ul.courseData{width: 100%;height: 100%;list-style: none;padding-left: 0px;display:flex;align-items: center;justify-content: center;}
+ul.courseData li{float: left;height: 100%;width: 33%;}
+li.shu{width: 1px!important;height: 100%;background-color: #C5CCD5}
+.num{font-size:16px;color:rgba(90,155,210,1);margin: 0;font-weight: bold;}
+.kind{margin: 5px auto;display: flex;align-items: center;justify-content: center;}
+.oneIcon{display: inline-block; width: 16px;height: 16px;background:url(../img/classtotal_icon@2x.png) no-repeat;background-size:100% 100%;vertical-align: middle;cursor: pointer;}
+.twoIcon{display: inline-block; width: 16px;height: 16px;background:url(../img/student_icon@2x.png) no-repeat;background-size:100% 100%;vertical-align: middle;cursor: pointer;}
+.threeIcon{display: inline-block; width: 16px;height: 16px;background:url(../img/resource_icon@2x.png) no-repeat;background-size:100% 100%;vertical-align: middle;cursor: pointer;}
+.textTitle{font-size:12px;color:rgba(103,128,152,1);margin-left: 2px;}
+a.teacherA{text-decoration: none;color:rgba(90,155,210,1) }
+
+/* schlProfile_one/html */
+.collageContent{width: 100%;height: 170px;background-color: #fff;padding-top:10px;margin-bottom:30px;cursor: pointer;}
+.topcontent{width: calc(100% - 32px);height:75px;background:rgba(90,155,210,0.72);margin: 5px 16px 20px 16px;position: relative;}
+.schoolcard_img{width: 54px;height: 54px;position: absolute;right: 0;bottom: 0;}
+.left{width:100%;height:100%;margin:0 auto;float: left;padding-left:15px} 
+.fontWhite{color:#fff!important;}
+.left h4{font-weight: bold}
+span.idnum{display: inline-block;background-color: #fff;border-radius: 13px!important;text-align: center;color:#5A9BD2;font-size: 12px;line-height: 20px;cursor: pointer;padding:0px 10px;}
+.idText{color: #5A9BD2}
+img.school_pic{width: 100%;height: 100%;}
+.Option{padding-right: 15px;}
+.schlPage{margin-top:-3px;}
+
+/* schlProfile_detail.html */
+.search_scl{margin-right:30px;width:65px;}
+.scl{padding: 0 0 0 15px!important;}
+.classItem{width: 100%;border:1px solid #C5CCD5;position: relative;margin-bottom: 15px;}
+@media (max-width:768px){
+  .classItem{height: auto;}
+  .coursePic{width: 100%;}
+}
+@media only screen and (max-width:993px){
+  .coursePic{width: 100%;height: 350px!important;}
+  img.course_img{width: 100%;height: 100%;object-fit: cover}
+}
+.coursePic{width: 100%;height: 130px;}
+img.course_img{width: 100%;height: 100%;}
+.stuNum{height: 24px;position: absolute;right: 0;top: 40%;background-color: #5A9BD2;color: #fff;line-height: 24px;text-align: center;padding:0 5px;}
+span.icon{display: inline-block;width: 16px;height: 12px; background: url(../img/join_icon@2x.png) no-repeat left 1px top 0px;background-size: 16px 12px;}
+.itemText{width: 100%;height: 87px;display: flex;justify-content: center;flex-direction: column;}
+.itemName{padding:15px 0px 0px 10px!important;margin:0;}
+.itemName a{font-size:14px;color:rgba(90,155,210,1);text-decoration: none;}
+.courseTeacher{font-size:14px;color:rgba(51,51,51,1);padding:10px 0px 0px 10px;}
+.pr-7{padding-right: 7px;}
+.font-yellow-soft{color:#F7B32D!important;}
+.yellow-soft{background-color:#F7B32D!important;}
+
+
+/* teahProfile_two.html */
+.teachItemText{display: flex;align-items: center;justify-content: center;text-align: center;}
+.teahItemName{margin: 0;}
+.totalNum{margin-bottom:0!important;}
+ .bg{position: relative;cursor: pointer;}
+.color-red{color: #DE3C3C!important;}
+.color-blue{color: #3AAFDA!important;}
+.color-green{color: #41D158!important;}
+.color-purple{color: #7266BA!important;}
+.color-yellow{color: #F7B32D!important;}
+.teacher_icons{width: 64px;height: 64px;position: absolute;right: 0;bottom: 0;margin-right: 0px;transition:width,height,0.5s;}
+.bg:hover > .totalNum > .number > .teacher_icons{width: 82px!important;height: 82px!important;transition:width,height,0.5s;}
+
+
+
+
+.disabled{
+  pointer-events:none; 
+  cursor: not-allowed;
+}
+
+.courseItem {cursor: pointer;}
+
+/* add */
+/* 属性课程 */
+.all-name a{
+  text-decoration: none;
+}
+/* 教师概况 */
+.teacherName,.collegeName{
+  text-align: center;
+}
