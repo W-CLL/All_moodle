@@ -1,0 +1,39 @@
+.mn_sort a:hover{color: #1ab177;text-decoration:underline;}
+
+
+.mn_mc .item .i_bd{display:none;position:absolute;top:0px;right:0px;min-height:220px;z-index:12;left:140px;height:auto;overflow:visible;border:1px solid #1cb177;background:#fff;box-shadow:1px 1px 2px #ddd;}
+.mn_mc .item{width:125px;height:32px;border-bottom:1px solid #f2f2f2;line-height:29px;}
+.mn_mc .item_last{border-bottom:none;}
+.mn_mc .item .i_hd{position:absolute;z-index:1;width:125px;}
+.mn_mc .item .i_hd_tit{display:block;width:220px;padding-left:26px;font-size:14px;}
+.mn_mc .item .i_hd_arr{display:block;position:absolute;left:110px;top:9px;width:8px;height:11px;overflow:hidden;background:url('i_hd_arr.gif') no-repeat 0 0;}
+.mn_mc .item_hover .i_hd{z-index:13;}
+
+.mn_mc .item_hover .i_hd_arr{display:none;}
+.mn_mc .item_hover{height:28px;line-height:28px;border-left:3px solid #1cb177;border-top:1px solid #1cb177;border-bottom:1px solid #1cb177;box-shadow:0px 1px 1px #ddd;}
+.mn_mc .item_hover .i_hd_tit{width:122px;padding-left:23px;z-index:16;background:#fff;height: 24px;margin-top: 1px;}
+
+
+.categ_m{float:left;width:fit-content;min-height:auto;padding:0px 15px;}
+.categ_m dd{float:left;width:fit-content;}
+.categ_m h3{font:550 15px/20px 'simsun';padding-bottom:10px;padding-top:14px;border-bottom:1px solid #eee;}
+.categ_m h4{color:#1BB177;}
+.categ_m dl{clear:both;border-bottom:1px solid #eee;}
+.categ_m dl:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.categ_m dt{float:left;overflow:hidden;text-align:right;margin-right:15px;}
+.categ_m dt a{padding:2px 0 0 0;color:#1ab177;}
+.categ_m dd a{float:left;padding:0 10px;margin:9px 0;border-left:1px solid #eee;line-height:14px;}
+
+
+.categ_s{float:left;}
+.categ_s .pic1{padding:2px;}
+.categ_s .pic2{margin:13px;}
+.categ_s .pic2 li{margin-bottom:4px;}
+.categ_s .lstTxt{margin:13px 13px 25px;}
+.categ_s .lstTxt h3{font-size:18px;line-height:18px;color:#1BB177;padding-bottom:1px;}
+.categ_s .lstTxt li{line-height:14px;margin:10px 0;}
+.categ_s .lstPic{margin:13px 13px 0px;padding-bottom:7px;}
+.categ_s .lstPic h3{font-size:12px;line-height:18px;color:#1BB177;}
+.categ_s .lstPic li{float:left;margin:13px 13px 0 0;}
+.categ_s a img:hover{opacity:.7;filter:alpha(opacity=70);}
+

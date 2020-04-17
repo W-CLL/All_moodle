@@ -1,0 +1,27 @@
+body{font-family: Microsoft YaHei!important;}
+.head{width: 100px;height: 100px;margin-top: 20px; border-radius: 60px!important;}
+.img{text-align: center;}
+.textLeft{height: 85px;}
+.textLeft p{margin: 14px 0;}
+.department{color: #666666;text-align: center;}
+.progress{height: 10px;width: 100%;margin-bottom: 10px;}
+.progressDiv{width:100%; padding:0 15px;overflow: hidden;}
+.status{margin-bottom: 40px;}
+.status-title{float: left;color: #678098;}
+.status-number{float: right;color: #678098;}
+.leftNum{height: 175px;}
+.stuNum{font-size:20px;font-family:MicrosoftYaHeiSemibold;color:rgba(90,155,210,1);height:34px;}
+.colorRed{color: #F36B5B!important}
+.stuItem p{margin:5px 0;display: flex;align-items: center;justify-content: center;}
+.pl-0{padding-left: 0;}
+.textLeft p a{font-weight: bold}
+@media (max-width:993px){
+  .pl-0{padding-left: 15px;}
+}
+.oneIcon{background:url(../img/character_icon@2x.png) no-repeat;background-size:100% 100%;}
+.twoIcon{background:url(../img/records_icon@2x.png)no-repeat;background-size: 100% 100%}
+.threeIcon{background:url(../img/visit_icon@2x.png) no-repeat;background-size:100% 100%;}
+.fourIcon{background:url(../img/time_icon@2x.png) no-repeat;background-size:100% 100%;}
+.dashboard-stat2{padding-top: 0px!important}
+.icon{margin-right: 3px;}
+.stuName{font-size:20px;color:rgba(90,155,210,1);line-height:27px;text-align: center;}

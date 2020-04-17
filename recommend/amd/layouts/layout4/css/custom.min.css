@@ -1,0 +1,272 @@
+body {
+    font-family: Microsoft YaHei!important;
+}
+
+.page-logo {
+    width: 276px!important;
+}
+
+.page-header.navbar .page-logo .logo-default {
+    margin-top: 16px;
+    margin-left: 0px;
+    margin-right: 15px;
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+
+.page-title {
+    font-size: 21px;
+    color: rgba(90, 155, 210, 1);
+    float: left;
+    line-height: 75px;
+    margin: 0;
+    font-family: MicrosoftYaHeiSemibold!important;
+}
+
+.page-container {
+    clear: both;
+}
+
+a.navA {
+    padding: 0px!important;
+    background-color: #3B3F51!important;
+}
+
+
+/* 头部平台、课程 */
+
+.platform,
+.course {
+    float: left;
+    margin-right: 30px;
+}
+
+.platform a,
+.course a {
+    display: block;
+    text-decoration: none;
+    color: #5A9BD2;
+    font-size: 16px;
+    height: 74px;
+}
+
+img.platformImg,
+img.courseImg {
+    width: 28px;
+    height: 28px;
+    float: left;
+    margin-top: 23px;
+    margin-right: 10px;
+}
+
+p.platformText,
+p.courseText {
+    float: left;
+    line-height: 75px;
+    margin: 0
+}
+
+.menu-pic {
+    margin-top: 15px;
+}
+
+.topActive a {
+    color: #F36B5B;
+    border-bottom: 2px solid #F36B5B;
+}
+
+
+/* 课程 */
+
+
+/* .course a{display: block;text-decoration: none;color: #F36B5B;font-size: 16px;height: 74px;color: #5A9BD2;} */
+
+
+/* 左边导航栏 */
+
+.gaikuang,
+.school_icon,
+.teacher_icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+}
+
+span.ml-20 {
+    margin-left: 20px;
+}
+
+.page-sidebar {
+    min-height: 881px;
+}
+
+@media (max-width: 991px) {
+    .page-sidebar {
+        min-height: auto!important;
+        overflow-y: visible;
+    }
+    #search {
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+}
+
+
+/* 中间内容 */
+
+.page-title h1 {
+    font-size: 20px!important;
+    color: #678098!important;
+    font-weight: bold!important;
+    font-family: MicrosoftYaHeiSemibold!important;
+}
+
+.bordered {}
+
+.bg1 {
+    background-image: url(../img/class_bg@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.bg2 {
+    background-image: url(../img/teacher_bg@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.bg3 {
+    background-image: url(../img/student_bg@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.bg4 {
+    background-image: url(../img/xuanketotal_bg@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.bg5 {
+    background-image: url(../img/fangwen_bg@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.font-pink-soft {
+    color: #F786AE
+}
+
+.font-black {
+    color: #000000
+}
+
+.font-grep {
+    color: grey
+}
+
+.pink-soft {
+    background-color: #F786AE;
+    color: #fff!important;
+}
+
+.col-xs-1-5,
+.col-sm-1-5,
+.col-md-1-5,
+.col-lg-1-5 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-1-5 {
+    width: 20%;
+    float: left;
+}
+
+@media only screen and (max-width: 768px) {
+    /* .page-sidebar{height: 0px!important;} */
+    .col-xs-1-5 {
+        width: 100%;
+        float: left;
+    }
+    #search {
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* .page-sidebar{height: 0px!important;} */
+    .col-xs-1-5 {
+        width: 50%;
+        float: left;
+    }
+    #search {
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .col-xs-1-5 {
+        width: 20%;
+        float: left;
+    }
+    .seven {
+        width: 14%;
+        float: left;
+    }
+    #search {
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+}
+
+.leave_icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+    margin-bottom: 4px;
+}
+
+.CSSAnimationChart {
+    height: 400px;
+}
+
+.dropdown-menu {
+    width: 0px!important;
+}
+
+.dropdown-menu li a {
+    color: #fff!important;
+    text-align: center;
+    padding-right: 0!important;
+    padding-left: 0!important
+}
+
+.dropdown-menu li a:hover {
+    color: #494949!important;
+    text-align: center;
+}
+
+ul.dropdown-menu li.active a {
+    color: #494949!important;
+    text-align: center;
+    background-color: #fff!important;
+}
+
+.student_hidden {
+    display: none!important;
+}
+
+.sub-menu {
+    max-height: 690px;
+    overflow: auto;
+}
+
+.sub-menu::-webkit-scrollbar {
+    display: none;
+}
