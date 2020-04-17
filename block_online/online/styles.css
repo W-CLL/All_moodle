@@ -1,0 +1,30 @@
+.block_online .content .list li.listentry {
+    clear: both;
+}
+
+.block_online .content .list li.listentry .user {
+    float: left;
+    position: relative;
+}
+
+.block_online .content .list li.listentry .user .userpicture {
+    vertical-align: text-bottom;
+}
+
+.block_online .content .list li.listentry .message,
+.block_online .content .list li.listentry .uservisibility {
+    float: right;
+    margin-top: 3px;
+}
+
+.block_online .content .info {
+    text-align: center;
+}
+
+.block_online .content .show {
+    height: 25px;
+    font-size:12px;
+    color: black;
+    font-family: 微软雅黑;
+    
+}
